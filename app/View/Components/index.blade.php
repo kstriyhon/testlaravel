@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 class index.blade extends Component
 {
     /**
-     * Create a new component instance.
+     * Crea una nueva instancia del componente.
      */
     public function __construct()
     {
@@ -17,7 +17,7 @@ class index.blade extends Component
     }
 
     /**
-     * Get the view / contents that represent the component.
+     * hace el Get de la vista / contenido  que representa al componente.
      */
     public function render(): View|Closure|string
     {

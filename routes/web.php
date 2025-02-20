@@ -1,7 +1,8 @@
 <?php
-use App\Http\Controllers\UploadController;
+use App\Http\Controllers\FileUploadController;
 
-Route::get('/', [UploadController::class, 'index'])->name('uploads.index');
-Route::post('/upload', [UploadController::class, 'store'])->name('uploads.store');
-Route::get('/upload/{upload}', [UploadController::class, 'show'])->name('uploads.show');
+Route::get('/upload', [FileUploadController::class, 'showUploadForm'])->name('upload.form');
+Route::post('/upload', [FileUploadController::class, 'upload'])->name('upload.file');
 
+Route::get('/filter', [FileUploadController::class, 'showFilterForm'])->name('filter.form');
+Route::get('/filter-programs', [FileUploadController::class, 'filterPrograms'])->name('filter.programs');
